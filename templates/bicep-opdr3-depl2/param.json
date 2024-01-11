@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "bachelorproef-plan"
+    },
+    "alwaysOn": {
+      "value": false
+    },
+    "ftpsState": {
+      "value": "FtpsOnly"
+    },
+    "sku": {
+      "value": "Basic"
+    },
+    "skuCode": {
+      "value": "B1"
+    },
+    "linuxFxVersion": {
+      "value": "DOTNETCORE|7.0"
+    },
+    "clientAffinityEnabled": {
+      "value": false
+    },
+    "httpsOnly": {
+      "value": false
+    },
+    "publicNetworkAccess": {
+      "value": "Enabled"
+    },
+    "reserved": {
+      "value": true
+    },
+    "zoneRedundant": {
+      "value": false
+    },
+    "siteName": {
+      "value": "bachelorproef-site"
+    },
+    "location": {
+      "value": "westeurope"
+    }
+  }
+}

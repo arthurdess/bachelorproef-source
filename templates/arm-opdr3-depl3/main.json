@@ -1,0 +1,27 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "tagsByResource": {
+            "type": "object"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2021-03-01-preview",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "type": "Microsoft.MixedReality/remoteRenderingAccounts",
+            "identity": {
+                "type": "systemAssigned"
+            },
+            "properties": {}
+        }
+    ]
+}

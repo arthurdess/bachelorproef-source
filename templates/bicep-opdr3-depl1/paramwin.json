@@ -1,0 +1,116 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westeurope"
+        },
+        "networkInterfaceName": {
+            "value": "bachelorproefvm-nic"
+        },
+        "networkSecurityGroupName": {
+            "value": "bachelorproefvm-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "bachelorproefvm-subnet"
+        },
+        "virtualNetworkName": {
+            "value": "bachelorproefvm-vnet"
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.0.0.0/16"
+            ]
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "bachelorproefvm-subnet",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/24"
+                    }
+                }
+            ]
+        },
+        "publicIpAddressName": {
+            "value": "bachelorproefvm-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineName": {
+            "value": "bachelorproefvm"
+        },
+        "virtualMachineComputerName": {
+            "value": "bachelorproefvm"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1s"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "adminUsername": {
+            "value": "bachelorproefuser"
+        },
+        "adminPassword": {
+            "value": "bachelorproefPW12@"
+        },
+        "virtualMachineZone": {
+            "value": "1"
+        },
+        "hibernationEnabled": {
+            "value": false
+        },
+        "osType": {
+            "value": "windows"
+        },
+        "osConfig": {
+            "value": {}
+        },
+        "imagePublisher": {
+            "value": "MicrosoftWindowsDesktop"
+        },
+        "imageOffer": {
+            "value": "Windows-10"
+        },
+        "imageSku": {
+            "value": "win10-22h2-pron"
+        },
+        "imageVersion": {
+            "value": "latest"
+        },
+        "privateIPAllocationMethod": {
+            "value": "Dynamic"
+          }
+    }
+}
